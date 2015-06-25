@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:selectOneMenu id = "crit" value="#{searchController.searchCriteria}" >
+                <f:selectItem itemValue="title" itemLabel="Title." />
+                <f:selectItem itemValue="author" itemLabel="Author" />
+                <f:selectItem itemValue="callNumber" itemLabel="Call Number" />
+                <f:selectItem itemValue="type" itemLabel="Type" />
+            </h:selectOneMenu>
+            <h:inputText id="keyw" value="#{searchController.searchKeyword}"></h:inputText>
+            <h:commandButton value="Search" action ="#{searchController.doSearch()}">
+                <f:ajax execute="crit keyw" render="result"/>
+            </h:commandButton>
+            <h:dataTable binding="#{searchController.datatable}" value="#{searchController.bookCopies}" var="bookCopy" id="result">
+                <h:column>
+                    <f:facet name="header">Title</f:facet>
+                        #{bookCopy.book.title}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Author</f:facet>
+                        #{bookCopy.book.author}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Call Number</f:facet>
+                        #{bookCopy.callNumber}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Details</f:facet>
+                    <h:button value="Go to details" outcome="details">
+                        <f:param name="callNumber" value="#{bookCopy.callNumber}" />
+                    </h:button>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

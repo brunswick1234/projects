@@ -1,0 +1,3 @@
+spark.port=4537
+h2.dir=h2_tut3_group7
+

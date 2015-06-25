@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gomokuV1</string>
+    <string name="title_activity_choose_player">gomokuV1</string>
+    <string name="title_activity_add_or_edit_player">gomokuV1</string>
+    <string name="title_activity_choose_photo">gomokuV1</string>
+    <string name="title_activity_choose_single_game_opponent">gomokuV1</string>
+    <string name="title_activity_single_game">gomokuV1</string>
+    <string name="title_activity_choose_two_players_game_opponent">gomokuV1</string>
+    <string name="title_activity_two_players_game">gomokuV1</string>
+    <string name="title_activity_rank">gomokuV1</string>
+    <string name="tab1">gomokuV1</string>
+</resources>

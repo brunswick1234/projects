@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1"
+              android:background="@android:color/background_light">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="21dp">
+    </LinearLayout>
+    <ImageButton
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:id="@+id/addPhotoButton"
+            android:onClick="choosePhoto" android:layout_gravity="center_horizontal" android:scaleType="fitXY"
+            android:background="@android:color/background_light"
+            android:src = "@drawable/defaultavatar"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageButton
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:id="@+id/imageButton2"
+                android:onClick="confirmAddPlayerOrEditPlayer"
+                android:src="@drawable/confirmbutton"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/background_light" android:layout_below="@+id/mottoOfNewPlayer"
+                android:layout_alignEnd="@+id/mottoOfNewPlayer"/>
+        <ImageButton
+                android:layout_width="55dip"
+                android:layout_height="55dip"
+                android:id="@+id/imageButton3"
+                android:onClick="clearAddPlayer"
+                android:src="@drawable/canclebutton"
+                android:layout_marginLeft="64dp"
+                android:layout_alignBottom="@+id/imageButton2" android:layout_alignParentStart="true"
+                android:scaleType="fitXY" android:background="@android:color/background_light"/>
+        <EditText
+                android:layout_width="250dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/mottoOfNewPlayer"
+                android:layout_below="@+id/nameOfNewPlayer" android:layout_alignStart="@+id/imageButton3"
+                android:layout_marginTop="31dp" android:hint="Message to your opponent"
+                android:gravity="center_horizontal"
+                android:textColor="#ff202020"/>
+        <EditText
+                android:layout_width="250dip"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nameOfNewPlayer"
+                android:layout_gravity="center_horizontal"
+                android:autoText="false" android:hint="Name" android:gravity="center_horizontal"
+                android:layout_alignParentTop="true" android:layout_alignStart="@+id/mottoOfNewPlayer"
+                android:layout_marginTop="16dp" android:textColor="#ff202020"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip" android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" android:layout_above="@+id/nameOfNewPlayer">
+        </LinearLayout>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:id="@+id/imageView"
+                android:src = "@drawable/logobottom"
+                android:layout_alignParentBottom="true" android:layout_alignStart="@+id/imageButton3"/>
+    </RelativeLayout>
+</LinearLayout>

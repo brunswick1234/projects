@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1" android:background="@android:color/background_dark">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.38" android:background="@android:color/background_light">
+        <ImageButton
+                android:layout_width="180dip"
+                android:layout_height="200dip"
+                android:id="@+id/photoInMain"
+                android:onClick="choosePlayer"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dip" android:layout_marginTop="30dip"
+                android:scaleType="fitXY"
+                android:background="@android:color/background_light" android:layout_alignParentBottom="true"/>
+        <TextView
+                android:layout_width="200dip"
+                android:layout_height="50dip"
+                android:text="New Text"
+                android:id="@+id/nameInMain"
+                android:layout_alignParentEnd="true" android:layout_alignTop="@+id/photoInMain"
+                android:layout_above="@+id/mottoInMain" android:textStyle="bold"
+                android:textColor="@android:color/black" android:textSize="29dp"
+                android:layout_toRightOf="@+id/photoInMain" android:gravity="center_vertical"/>
+        <TextView
+                android:layout_width="200dip"
+                android:layout_height="50dip"
+                android:text=""
+                android:id="@+id/scoreInMain" android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/nameInMain"
+                android:layout_alignParentEnd="true" android:textColor="#ffffbe2c"
+                android:textSize="18dp" android:gravity="center_vertical"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:text=""
+                android:id="@+id/mottoInMain"
+                android:layout_alignStart="@+id/nameInMain"
+                android:layout_alignParentEnd="true" android:layout_above="@+id/scoreInMain"
+                android:textColor="#ff4f95ff" android:textSize="18dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.56" android:background="@android:color/background_light">
+        <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="95dp"
+                android:id="@+id/singlePlayerBottom"
+                android:onClick="singlePlayer"
+                android:layout_above="@+id/textView2"
+                android:layout_marginLeft="57dip"
+                android:src="@drawable/singleplayer" android:scaleType="fitXY"
+                android:background="@android:color/background_light"/>
+        <ImageButton
+                android:layout_width="95dp"
+                android:layout_height="100dp"
+                android:id="@+id/twoPlayersBottom"
+                android:onClick="twoPlayer"
+                android:src="@drawable/twoplayersgame" android:scaleType="fitXY"
+                android:background="@android:color/background_light"
+                android:layout_alignBottom="@+id/singlePlayerBottom" android:layout_toRightOf="@+id/singlePlayerBottom"
+                android:layout_marginLeft="66dp"/>
+        <ImageButton
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:id="@+id/statisticsBottom"
+                android:onClick="statistics"
+                android:layout_alignTop="@+id/settingBottom"
+                android:layout_alignStart="@+id/textView2"
+                android:src="@drawable/statistics" android:scaleType="fitXY"
+                android:background="@android:color/background_light"/>
+        <ImageButton
+                android:layout_width="88dp"
+                android:layout_height="90dp"
+                android:id="@+id/settingBottom"
+                android:layout_alignStart="@+id/twoPlayersBottom"
+                android:src="@drawable/setting" android:scaleType="fitXY"
+                android:background="@android:color/background_light" android:layout_below="@+id/textView2"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:text="  Single Player"
+                android:id="@+id/textView2"
+                android:layout_centerVertical="true" android:layout_alignStart="@+id/singlePlayerBottom"
+                android:textColor="@android:color/black" android:textStyle="bold"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two Players"
+                android:id="@+id/textView3"
+                android:gravity="center" android:textColor="@android:color/black"
+                android:layout_below="@+id/singlePlayerBottom" android:layout_alignStart="@+id/twoPlayersBottom"
+                android:textStyle="bold"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistics"
+                android:id="@+id/textView4"
+                android:layout_alignStart="@+id/statisticsBottom" android:layout_below="@+id/statisticsBottom"
+                android:layout_alignEnd="@+id/statisticsBottom" android:gravity="center"
+                android:textColor="@android:color/black" android:textStyle="bold"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setting"
+                android:id="@+id/textView5" android:layout_alignTop="@+id/textView4"
+                android:layout_alignStart="@+id/settingBottom" android:layout_alignEnd="@+id/settingBottom"
+                android:gravity="center" android:textColor="@android:color/black" android:textStyle="bold"/>
+    </RelativeLayout>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:id="@+id/imageView"
+            android:layout_weight="0.06" android:background="@android:color/background_light"
+            android:src="@drawable/logobottom"/>
+</LinearLayout>
+

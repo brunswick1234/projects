@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.gomokuV1"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="19"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChoosePlayerActivity"
+                  android:label="@string/title_activity_choose_player"
+                 android:parentActivityName="com.example.gomokuV1.MainActivity" >
+        </activity>
+        <activity android:name=".AddOrEditPlayerActivity"
+                  android:label="@string/title_activity_add_or_edit_player"
+                  android:parentActivityName="com.example.gomokuV1.ChoosePlayerActivity" >
+        </activity>
+        <activity android:name=".ChoosePhotoActivity"
+                  android:label="@string/title_activity_choose_photo"
+                  android:parentActivityName="com.example.gomokuV1.AddOrEditPlayerActivity" >
+        </activity>
+        <activity android:name=".ChooseSingleGameOpponentActivity"
+                  android:label="@string/title_activity_choose_single_game_opponent"
+                  android:parentActivityName="com.example.gomokuV1.MainActivity" >
+        </activity>
+        <activity android:name=".SingleGameActivity"
+                  android:label="@string/title_activity_single_game"
+                  android:parentActivityName="com.example.gomokuV1.ChooseSingleGameOpponentActivity" >
+        </activity>
+        <activity android:name=".ChooseTwoPlayersGameOpponentActivity"
+                  android:label="@string/title_activity_choose_two_players_game_opponent"
+                  android:parentActivityName="com.example.gomokuV1.MainActivity" >
+        </activity>
+        <activity android:name=".TwoPlayerGameActivity"
+                  android:label="@string/title_activity_two_players_game"
+                  android:parentActivityName="com.example.gomokuV1.ChooseTwoPlayersGameOpponentActivity" >
+        </activity>
+        <activity android:name=".RankTabActivity"
+                  android:label="@string/title_activity_rank"
+                  android:parentActivityName="com.example.gomokuV1.MainActivity" >
+        </activity>
+    </application>
+</manifest>
