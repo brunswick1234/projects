@@ -1,0 +1,3 @@
+This web system allows user to register and manage profile online. 
+TDD approach was used in the process of development with Subversion as version control tool. 
+Unit test, integration test and system test are performed during developing to fully test the system.
