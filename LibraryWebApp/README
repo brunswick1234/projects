@@ -1,0 +1,3 @@
+This web application provides the facility for search, borrowing and return of books from a library.
+Users need to login to use the system, and librarian type user will have privilege to 
+perform CRUD operations regarding books’ data in database.
